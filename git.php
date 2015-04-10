@@ -16,7 +16,7 @@ if (isset($argv[1])) {
 }
 
 switch ($action) {
-	case "init": \Pit\Git::init("Brian Seitel", "brianseitel@gmail.com"); break;
+	case "init": \Pit\Git::init(); break;
 	case "hash": 
 		$blob = new \Pit\Blob($argv[1]);
 		echo $blob->hash;

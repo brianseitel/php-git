@@ -5,13 +5,17 @@ namespace Pit;
 class Git {
 	const CONFIG_PATH = '/.pit/config';
 
-	public static function init($name, $email) {
+	public static function init() {
 		@mkdir(dirname(ROOT_DIR.self::CONFIG_PATH), 0777, true);
 		if (file_exists(ROOT_DIR.self::CONFIG_PATH)) {
 			unlink(ROOT_DIR.self::CONFIG_PATH);
 		}
 
-		file_put_contents(ROOT_DIR.self::CONFIG_PATH, "[user]\nname = {$name}\nemail = {$email}");
+		file_put_contents(ROOT_DIR.self::CONFIG_PATH, "[user]\nname = \nemail = ");
+
+		echo "\n** Warning! **";
+		echo "\nEdit your .pit/config file to include your name and email";
+		echo "\nor committing won't work!\n";
 	}
 
 	public static function cat_file($hash) {
