@@ -1,0 +1,17 @@
+{
+    "name": "brianseitel/php-git",
+    "description": "A git implementation in PHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Seitel",
+            "email": "brian@rentjuice.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Pit\\": "src/Pit/"
+        }
+    }
+}
